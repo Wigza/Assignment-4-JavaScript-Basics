@@ -1,3 +1,9 @@
+
+function overideLinks(event) {
+  console.log(event);
+  event.preventDefault()
+}
+
 function showAbout() {
   $("#learnmoretext").slideDown()
   $(".learnmore").hide()
@@ -20,6 +26,7 @@ function start() {
   $(".readmore").click(showText);
   $(".readless").click(hideText);
   $(".learnmore").click(showAbout);
+  $("a").click(overideLinks)
 }
 
 $(document).ready(start);
